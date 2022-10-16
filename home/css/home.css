@@ -1,0 +1,124 @@
+/* start landing */
+.landing{
+    height: calc(100vh - 200px);
+}
+.landing .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.landing .typewriter{
+    color: var(--black);
+    font-size: 30px;
+    padding: 40px;
+    margin-top: 30px;
+    font-weight: 800;
+}
+.landing .typewriter p{
+    margin: 0;
+    font-size: 35px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 7s infinite both steps(19), blink 0.5s infinite linear;
+    border-right: 2px solid var(--black);
+    height: 45px;
+}
+.landing .typewriter p span{
+    color: var(--orange);
+    -webkit-text-stroke: white 0.4px;
+    animation: flash 7s ease infinite;
+}
+
+@keyframes type {
+    0% , 20%{
+        width: 0;
+    }
+    60%,100%{
+        width: 370px;
+    }
+}
+@keyframes blink {
+    from{
+        border-right-color: transparent;
+    }to{
+        border-right-color: var(--black);
+    }
+}
+@keyframes flash {
+    0%,67%{
+        text-shadow: 0px 0 0px var(--black);
+    }
+    70%,77%{
+        text-shadow: 0px 0 10px var(--black);
+    }
+    80%,87%{
+        text-shadow: 0px 0 0px var(--black);
+    }
+    90%,98%{
+        text-shadow: 0px 0 10px var(--black);
+    }
+}
+
+.landing form{
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.landing form #search{
+    padding: 20px 40px 20px 20px;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    color: var(--orange);
+    caret-color: var(--main-color);
+    width: 100%;
+}
+.landing form svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 17px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    color: var(--black);
+}
+.landing form svg:hover{
+    color: var(--main-color);
+}
+/* end landing */
+
+/* start statistics */
+.statistics .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 20px;
+}
+.statistics .stat{
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    gap: 20px;
+    justify-content: center;
+}
+.statistics .stat svg{
+    color: var(--main-color);
+    font-size: 40px;
+}
+.statistics .stat .text span{
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--black);
+    transition: var(--main-transition);
+}
+.statistics .stat .text p{
+    color: var(--light-color);
+    margin-top: 7px;
+}
+/* end statistics */
